@@ -10,10 +10,10 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class RunElevator extends Command {
-  public RunElevator() {
+public class RunDrivetrain extends Command {
+  public RunDrivetrain() {
     // Use requires() here to declare subsystem dependencies
-      requires(Robot.cargoElevator);
+     requires(Robot.drivetrain);
   }
 
   // Called just before this Command runs the first time
@@ -24,7 +24,7 @@ public class RunElevator extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.cargoElevator.SetVariableSpeed(Robot.m_oi.GetElevatorJoystick());
+    Robot.drivetrain.driveRobot(Robot.m_oi.GetLeftJoytick(), Robot.m_oi.GetRightJoystick());
   }
 
   // Make this return true when this Command no longer needs to run execute()

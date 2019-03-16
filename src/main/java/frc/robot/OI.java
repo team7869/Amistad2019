@@ -27,7 +27,7 @@ public double GetLeftJoytick(){
 }
 
 public double GetRightJoystick(){
-  return driverJoystick.getRawAxis(2);
+  return driverJoystick.getRawAxis(5);
 }
 
 public double GetElevatorJoystick(){
