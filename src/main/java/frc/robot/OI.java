@@ -22,12 +22,15 @@ Joystick operatorJoystick = new Joystick(1);
 
 public double GetLeftJoytick(){
 
-  return driverJoystick.getRawAxis(1);
+  double left = driverJoystick.getRawAxis(1);
+
+  return Math.signum(left)*Math.pow(left,2);
 
 }
 
 public double GetRightJoystick(){
-  return driverJoystick.getRawAxis(5);
+  double right = driverJoystick.getRawAxis(5); 
+  return Math.signum(right)*Math.pow(right,2);
 }
 
 public double GetElevatorJoystick(){
