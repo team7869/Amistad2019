@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.cameraserver.*;
 import frc.robot.subsystems.CargoElevator;
 import frc.robot.subsystems.Drivetrain;
 
@@ -41,6 +42,7 @@ public class Robot extends TimedRobot {
    // m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
     SmartDashboard.putData("Auto mode", m_chooser);
+    CameraServer.getInstance().startAutomaticCapture();
   }
 
   /**
